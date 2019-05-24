@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Add a file name"
+else
+    sed -ri ':a;s/^( *)\t/\1    /;ta' $1
+fi
+
